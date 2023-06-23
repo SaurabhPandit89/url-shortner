@@ -1,0 +1,21 @@
+# Docker build command
+# docker build -t rails-6 -f Dockerfile.rails .
+
+FROM ruby:2.7.0
+
+# Working folder.
+ENV INSTALL_PATH /opt/app
+RUN mkdir -p $INSTALL_PATH
+WORKDIR $INSTALL_PATH
+
+# set bundler version & install bundler gem
+ENV BUNDLER_VERSION=2.1.2
+RUN gem install bundler -v 2.1.2
+
+# Copy the code inside docker container
+COPY . ./ 
+
+# Install gems
+RUN bundle check || bundle install
+
+ENTRYPOINT ["./entrypoints/docker-entrypoint.sh"]
