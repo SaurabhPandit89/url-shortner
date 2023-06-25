@@ -5,6 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile.rails
     container_name: url-shortner-app
+    command: bash -c "bundle exec rails s -b 0.0.0.0"
     depends_on:     
       - mysql-db
     env_file:
