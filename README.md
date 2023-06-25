@@ -5,9 +5,9 @@
 * Install docker https://docs.docker.com/get-docker/
 * Clone this repository
 * CD into the project directory
-* Run below command and wait for the command to finish.
+* Run below commands and wait for them to finish.
   > `docker compose up -d`
-* Run below command and wait for the command to finish
+  
   > `docker compose exec app bundle exec rails db:create`
   
   > `docker compose exec app bundle exec rails db:migrate`
