@@ -13,8 +13,8 @@
 
 ## Steps to Setup without Docker
 
-* Make sure you have ruby 2.7.0 installed, if not please install
-* Make sure you have MySQL server 8.0 or above is installed.
+* Make sure the system has ruby 2.7.0 installed, if not please install
+* Make sure the system has MySQL server 8.0 or above is installed.
 * Clone this repository
 * CD into the project directory
 * Run below commands
