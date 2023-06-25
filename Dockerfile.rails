@@ -18,4 +18,4 @@ COPY . ./
 # Install gems
 RUN bundle check || bundle install
 
-ENTRYPOINT ["./entrypoints/docker-entrypoint.sh"]
+CMD ["/bin/sh"]
