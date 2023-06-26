@@ -46,7 +46,7 @@
   > response: `token` & `validity` of the token
   
 * Retrieve user token (if expired, will generate a new token)
-  > `POST /api/v1/retreive_user`
+  > `POST /api/v1/retreive_token`
   
   > request params: `email` & `password`
   
