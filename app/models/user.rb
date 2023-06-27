@@ -11,7 +11,7 @@ class User < ApplicationRecord
                     uniqueness: true,
                     format: { with: /\A[^@\s]+@[^@\s]+\z/, message: 'Invalid email' }
 
-  after_create :generate_auth_token
+  before_save :generate_auth_token
 
   def token
     auth_token.token
@@ -21,10 +21,7 @@ class User < ApplicationRecord
     auth_token.valid_until
   end
 
-  private
-
   def generate_auth_token
     build_auth_token(token: SecureRandom.hex(32), valid_until: Time.now + 1.day)
-    save
   end
 end
